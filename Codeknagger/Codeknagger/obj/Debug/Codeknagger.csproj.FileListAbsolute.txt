@@ -1,0 +1,7 @@
+H:\c#\Codeknagger\Codeknagger\bin\Debug\Codeknagger.exe.config
+H:\c#\Codeknagger\Codeknagger\bin\Debug\Codeknagger.exe
+H:\c#\Codeknagger\Codeknagger\bin\Debug\Codeknagger.pdb
+H:\c#\Codeknagger\Codeknagger\obj\Debug\Codeknagger.csproj.AssemblyReference.cache
+H:\c#\Codeknagger\Codeknagger\obj\Debug\Codeknagger.csproj.CoreCompileInputs.cache
+H:\c#\Codeknagger\Codeknagger\obj\Debug\Codeknagger.exe
+H:\c#\Codeknagger\Codeknagger\obj\Debug\Codeknagger.pdb
