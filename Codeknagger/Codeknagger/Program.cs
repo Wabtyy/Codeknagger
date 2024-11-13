@@ -423,8 +423,20 @@ namespace Codeknagger
                 //gucken ob die ausgewählte zahl richtig ist
                 if (randoom == zahl)
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Die Zahl ist korrekt.");
+                    double Wahrscheinlichkeit = 1.0 / (obergrenze - untergrenze);
+					for (int i = 1; i < versuche; i++)
+					{
+						Wahrscheinlichkeit *= 2;
+					}
+					
+					if(versuche!=1)
+					{
+					Wahrscheinlichkeit*=2;
+					}
+					
+					Console.ForegroundColor = ConsoleColor.Green;
+					Console.WriteLine("Die Zahl ist korrekt.");
+					Console.WriteLine($"Die Wahrscheinlichkeit, die Zahl in {versuche} Versuchen zu erraten, liegt bei: {(Wahrscheinlichkeit*100).ToString("F2")}%");
                     Console.WriteLine("Sie haben " + versuche + " gebraucht");
 
                     Thread.Sleep(2500);
@@ -496,8 +508,20 @@ namespace Codeknagger
                 //gucken ob die ausgewählte zahl richtig ist
                 if (randoom == zahl)
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Die Zahl ist korrekt.");
+                    double Wahrscheinlichkeit = 1.0 / (obergrenze - untergrenze);
+					for (int i = 1; i < versuche; i++)
+					{
+						Wahrscheinlichkeit *= 2;
+					}
+					
+					if(versuche!=1)
+					{
+					Wahrscheinlichkeit*=2;
+					}
+					
+					Console.ForegroundColor = ConsoleColor.Green;
+					Console.WriteLine("Die Zahl ist korrekt.");
+					Console.WriteLine($"Die Wahrscheinlichkeit, die Zahl in {versuche} Versuchen zu erraten, liegt bei: {(Wahrscheinlichkeit*100).ToString("F2")}%");
                     Console.WriteLine("Sie haben " + versuche + " gebraucht");
 
                     Thread.Sleep(2500);
@@ -545,12 +569,7 @@ namespace Codeknagger
             {
                 versuche++;
 
-
                 Console.ForegroundColor = ConsoleColor.White;
-
-                //zufällige zahl aussuchen
-
-
                 Console.Clear();
                 //ausgabe
                 Console.WriteLine("Geben Sie eine Zahl ein (" + parameter[0] + "-" + parameter[1] + ")");
@@ -561,19 +580,16 @@ namespace Codeknagger
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Die Zahl darf nicht größer als " + parameter[1] + " sein.");
-
                 }
                 if (zahl > randoom)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Ihre zahl ist größer, wie die zufallszahl.");
-
                 }
                 else if (zahl < randoom)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Ihre zahl ist kleiner, wie die zufallszahl.");
-
                 }
                 //gucken ob die ausgewählte zahl richtig ist
                 if (randoom == zahl)
@@ -588,7 +604,20 @@ namespace Codeknagger
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Die zahl wurde nicht in der optimalen anzahl an veruschen erraten.");
                     }
-                    Console.ForegroundColor = ConsoleColor.Green;
+					
+					double Wahrscheinlichkeit = 1.0 / (obergrenze - untergrenze);
+					for (int i = 1; i < versuche; i++)
+					{
+						Wahrscheinlichkeit *= 2;
+					}
+					
+					if(versuche!=1)
+					{
+					Wahrscheinlichkeit*=2;
+					}
+					
+					Console.ForegroundColor = ConsoleColor.Green;
+					Console.WriteLine($"Die Wahrscheinlichkeit, die Zahl in {versuche} Versuchen zu erraten, liegt bei: {(Wahrscheinlichkeit*100).ToString("F2")}%");
                     Console.WriteLine("Die Zahl ist korrekt.");
                     Console.WriteLine("Sie haben " + versuche + " gebraucht");
 
@@ -597,17 +626,11 @@ namespace Codeknagger
                     menu();
                 }
                 Thread.Sleep(2500);
-
-
-
-
             }
             Thread.Sleep(1000);
             Console.Clear();
             menu();
         }
         #endregion
-
     }
 }
-
